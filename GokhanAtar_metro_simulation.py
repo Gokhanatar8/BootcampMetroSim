@@ -157,4 +157,16 @@ if __name__ == "__main__":
         rota, sure = sonuc
         print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota))
 
+    # Senaryo 4: Batıkent'ten Sıhhiye'ye
+    print("\n4. Batıkent'ten Sıhhiye'ye:")
+    rota = metro.en_az_aktarma_bul("T1", "M3")
+    if rota:
+        print("En az aktarmalı rota:", " -> ".join(i.ad for i in rota))
+
+        sonuc = metro.en_hizli_rota_bul("T1", "M3")
+    if sonuc:
+        rota, sure = sonuc
+        print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota))
+
+
 
